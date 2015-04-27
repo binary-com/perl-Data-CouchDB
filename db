@@ -1,0 +1,316 @@
+[01;31m[K-[m[K1 .travis.yml:3     [01;31m[K-[m[K couchdb
+[01;31m[K-[m[K2 .travis.yml:4     [01;31m[K-[m[K redis[01;31m[K-[m[Kserver
+[01;31m[K-[m[K3 .travis.yml:6     [01;31m[K-[m[K "5.14"
+[01;31m[K-[m[K4 .travis.yml:10     [01;31m[K-[m[K "cpanm Test::Most"
+[01;31m[K-[m[K5 .travis.yml:11     [01;31m[K-[m[K "cpanm Test::Exception"
+[01;31m[K-[m[K6 .travis.yml:12     [01;31m[K-[m[K "cpanm Test::NoWarnings"
+[01;31m[K-[m[K7 .travis.yml:13     [01;31m[K-[m[K "cpanm Test::MockModule"
+[01;31m[K-[m[K8 .travis.yml:14     [01;31m[K-[m[K "cpanm CouchDB::Client"
+[01;31m[K-[m[K9 .travis.yml:15     [01;31m[K-[m[K "cpanm LWP::UserAgent"
+[01;31m[K-[m[K10 .travis.yml:16     [01;31m[K-[m[K "cpanm Cache::RedisDB"
+[01;31m[K-[m[K11 .travis.yml:17     [01;31m[K-[m[K "cpanm Exception::Class"
+[01;31m[K-[m[K12 .travis.yml:18     [01;31m[K-[m[K "cpanm Moose"
+[01;31m[K-[m[K13 .travis.yml:19     [01;31m[K-[m[K "cpanm MooseX::StrictConstructor"
+[01;31m[K-[m[K14 .travis.yml:20     [01;31m[K-[m[K "cpanm namespace::autoclean"
+[01;31m[K-[m[K15 .travis.yml:21     [01;31m[K-[m[K "cpanm CouchDB::Client"
+[01;31m[K-[m[K16 .travis.yml:22     [01;31m[K-[m[K "cpanm Net::SSL"
+[01;31m[K-[m[K17 .travis.yml:23     [01;31m[K-[m[K "cpanm LWP::UserAgent"
+[01;31m[K-[m[K18 .travis.yml:24     [01;31m[K-[m[K "cpanm HTTP::Request"
+[01;31m[K-[m[K19 .travis.yml:25     [01;31m[K-[m[K "cpanm HTTP::Headers"
+[01;31m[K-[m[K20 .travis.yml:26     [01;31m[K-[m[K "cpanm Try::Tiny"
+[01;31m[K-[m[K21 .travis.yml:27     [01;31m[K-[m[K "cpanm IO::Socket::SSL"
+[01;31m[K-[m[K22 .travis.yml:28     [01;31m[K-[m[K "cpanm Devel::Cover::Report::Coveralls"
+[01;31m[K-[m[K23 .travis.yml:30     perl Makefile.PL && make test && cover [01;31m[K-[m[Ktest [01;31m[K-[m[Kreport coveralls
+[01;31m[K-[m[K24 Changes:1 Revision history for Data[01;31m[K-[m[KCouchDB
+[01;31m[K-[m[K25 LICENSE:68       worldwide, non[01;31m[K-[m[Kexclusive, no[01;31m[K-[m[Kcharge, royalty[01;31m[K-[m[Kfree, irrevocable
+[01;31m[K-[m[K26 LICENSE:75       worldwide, non[01;31m[K-[m[Kexclusive, no[01;31m[K-[m[Kcharge, royalty[01;31m[K-[m[Kfree, irrevocable
+[01;31m[K-[m[K27 LICENSE:83       cross[01;31m[K-[m[Kclaim or counterclaim in a lawsuit) alleging that the Work
+[01;31m[K-[m[K28 LICENSE:115           wherever such third[01;31m[K-[m[Kparty notices normally appear. The contents
+[01;31m[K-[m[K29 LICENSE:148       of TITLE, NON[01;31m[K-[m[KINFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+[01;31m[K-[m[K30 LICENSE:187       identification within third[01;31m[K-[m[Kparty archives.
+[01;31m[K-[m[K31 LICENSE:195        http://www.apache.org/licenses/LICENSE[01;31m[K-[m[K2.0
+[01;31m[K-[m[K32 MANIFEST:6 t/00[01;31m[K-[m[Kload.t
+[01;31m[K-[m[K33 MANIFEST:8 t/pod[01;31m[K-[m[Kcoverage.t
+[01;31m[K-[m[K34 Makefile.PL:24     dist  => { COMPRESS => 'gzip [01;31m[K-[m[K9f', SUFFIX => 'gz', },
+[01;31m[K-[m[K35 Makefile.PL:25     clean => { FILES => 'Data[01;31m[K-[m[KCouchDB[01;31m[K-[m[K*' },
+[01;31m[K-[m[K36 README.md:1 # perl[01;31m[K-[m[KData[01;31m[K-[m[KCouchDB
+[01;31m[K-[m[K37 ignore.txt:17 Data[01;31m[K-[m[KCouchDB[01;31m[K-[m[K*
+[01;31m[K-[m[K38 ignore.txt:18 Data[01;31m[K-[m[KCouchDB[01;31m[K-[m[K*.tar.gz
+[01;31m[K-[m[K39 lib/Data/CouchDB.pm:9 Data::CouchDB [01;31m[K-[m[K CouchDB document management
+[01;31m[K-[m[K40 lib/Data/CouchDB.pm:26     my $couchdb = Data::CouchDB[01;31m[K-[m[K>new(
+[01;31m[K-[m[K41 lib/Data/CouchDB.pm:188         $couchdb[01;31m[K-[m[K>document($doc_id);
+[01;31m[K-[m[K42 lib/Data/CouchDB.pm:191         $couchdb[01;31m[K-[m[K>document($doc_id, $data);
+[01;31m[K-[m[K43 lib/Data/CouchDB.pm:205     my $cache_key = $self[01;31m[K-[m[K>db . '_' . $doc;
+[01;31m[K-[m[K44 lib/Data/CouchDB.pm:207         Cache::RedisDB[01;31m[K-[m[K>del($cache_namespace, $cache_key) if ($self[01;31m[K-[m[K>_can_cache);
+[01;31m[K-[m[K45 lib/Data/CouchDB.pm:208         $data = $self[01;31m[K-[m[K>master[01;31m[K-[m[K>document($doc, $data);
+[01;31m[K-[m[K46 lib/Data/CouchDB.pm:210         $data = Cache::RedisDB[01;31m[K-[m[K>get($cache_namespace, $cache_key) if ($self[01;31m[K-[m[K>_can_cache);
+[01;31m[K-[m[K47 lib/Data/CouchDB.pm:213             $data = $self[01;31m[K-[m[K>replica[01;31m[K-[m[K>document($doc);
+[01;31m[K-[m[K48 lib/Data/CouchDB.pm:214             Cache::RedisDB[01;31m[K-[m[K>set($cache_namespace, $cache_key, $data, 127)
+[01;31m[K-[m[K49 lib/Data/CouchDB.pm:215                 if ($data and $self[01;31m[K-[m[K>_can_cache);
+[01;31m[K-[m[K50 lib/Data/CouchDB.pm:228         $couchdb[01;31m[K-[m[K>view($db, $viewname);
+[01;31m[K-[m[K51 lib/Data/CouchDB.pm:231         $couchdb[01;31m[K-[m[K>view($db, $viewname, $parameters);
+[01;31m[K-[m[K52 lib/Data/CouchDB.pm:243     return $self[01;31m[K-[m[K>replica[01;31m[K-[m[K>view($view, $params);
+[01;31m[K-[m[K53 lib/Data/CouchDB.pm:251     if ($couchdb[01;31m[K-[m[K>document_present($doc_id)) {
+[01;31m[K-[m[K54 lib/Data/CouchDB.pm:259     1     [01;31m[K-[m[K if document is found.
+[01;31m[K-[m[K55 lib/Data/CouchDB.pm:260     undef [01;31m[K-[m[K if document is not found.
+[01;31m[K-[m[K56 lib/Data/CouchDB.pm:268     try { $self[01;31m[K-[m[K>replica[01;31m[K-[m[K>document($doc); } or return;
+[01;31m[K-[m[K57 lib/Data/CouchDB.pm:278     my $doc_id = $couchdb[01;31m[K-[m[K>create_document($doc_id);
+[01;31m[K-[m[K58 lib/Data/CouchDB.pm:286     return $self[01;31m[K-[m[K>master[01;31m[K-[m[K>create_document($doc);
+[01;31m[K-[m[K59 lib/Data/CouchDB.pm:294     $couchdb[01;31m[K-[m[K>delete_document($doc_id);
+[01;31m[K-[m[K60 lib/Data/CouchDB.pm:302     return $self[01;31m[K-[m[K>master[01;31m[K-[m[K>delete_document($doc);
+[01;31m[K-[m[K61 lib/Data/CouchDB.pm:310     $couchdb[01;31m[K-[m[K>create_database($db);
+[01;31m[K-[m[K62 lib/Data/CouchDB.pm:318     return $self[01;31m[K-[m[K>master[01;31m[K-[m[K>create_database();
+[01;31m[K-[m[K63 lib/Data/CouchDB.pm:326     if($couchdb[01;31m[K-[m[K>can_read) {
+[01;31m[K-[m[K64 lib/Data/CouchDB.pm:331     1     [01;31m[K-[m[K can read
+[01;31m[K-[m[K65 lib/Data/CouchDB.pm:332     undef [01;31m[K-[m[K otherwise
+[01;31m[K-[m[K66 lib/Data/CouchDB.pm:337     return $self[01;31m[K-[m[K>replica[01;31m[K-[m[K>can_connect;
+[01;31m[K-[m[K67 lib/Data/CouchDB.pm:345     if($couchdb[01;31m[K-[m[K>can_write) {
+[01;31m[K-[m[K68 lib/Data/CouchDB.pm:350     1     [01;31m[K-[m[K can write
+[01;31m[K-[m[K69 lib/Data/CouchDB.pm:351     undef [01;31m[K-[m[K otherwise
+[01;31m[K-[m[K70 lib/Data/CouchDB.pm:357     return $self[01;31m[K-[m[K>master[01;31m[K-[m[K>can_connect;
+[01;31m[K-[m[K71 lib/Data/CouchDB.pm:364     $params[01;31m[K-[m[K>{host} = $self[01;31m[K-[m[K>replica_host;
+[01;31m[K-[m[K72 lib/Data/CouchDB.pm:365     $params[01;31m[K-[m[K>{port} = $self[01;31m[K-[m[K>replica_port;
+[01;31m[K-[m[K73 lib/Data/CouchDB.pm:366     $params[01;31m[K-[m[K>{db}   = $self[01;31m[K-[m[K>db;
+[01;31m[K-[m[K74 lib/Data/CouchDB.pm:368     $params[01;31m[K-[m[K>{protocol} = $self[01;31m[K-[m[K>replica_protocol if ($self[01;31m[K-[m[K>replica_protocol);
+[01;31m[K-[m[K75 lib/Data/CouchDB.pm:369     $params[01;31m[K-[m[K>{couchdb}  = $self[01;31m[K-[m[K>couchdb          if ($self[01;31m[K-[m[K>couchdb);
+[01;31m[K-[m[K76 lib/Data/CouchDB.pm:371     return Data::CouchDB::Connection[01;31m[K-[m[K>new(%$params);
+[01;31m[K-[m[K77 lib/Data/CouchDB.pm:378     $params[01;31m[K-[m[K>{host} = $self[01;31m[K-[m[K>master_host;
+[01;31m[K-[m[K78 lib/Data/CouchDB.pm:379     $params[01;31m[K-[m[K>{port} = $self[01;31m[K-[m[K>master_port;
+[01;31m[K-[m[K79 lib/Data/CouchDB.pm:380     $params[01;31m[K-[m[K>{db}   = $self[01;31m[K-[m[K>db;
+[01;31m[K-[m[K80 lib/Data/CouchDB.pm:382     $params[01;31m[K-[m[K>{protocol} = $self[01;31m[K-[m[K>master_protocol if ($self[01;31m[K-[m[K>master_protocol);
+[01;31m[K-[m[K81 lib/Data/CouchDB.pm:383     $params[01;31m[K-[m[K>{couchdb}  = $self[01;31m[K-[m[K>couchdb         if ($self[01;31m[K-[m[K>couchdb);
+[01;31m[K-[m[K82 lib/Data/CouchDB.pm:385     return Data::CouchDB::Connection[01;31m[K-[m[K>new(%$params);
+[01;31m[K-[m[K83 lib/Data/CouchDB.pm:397 __PACKAGE__[01;31m[K-[m[K>meta[01;31m[K-[m[K>make_immutable;
+[01;31m[K-[m[K84 lib/Data/CouchDB.pm:406 Please report any bugs or feature requests to C<bug[01;31m[K-[m[Kdata[01;31m[K-[m[Kcouchdb at rt.cpan.org>, or through
+[01;31m[K-[m[K85 lib/Data/CouchDB.pm:407 the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Data[01;31m[K-[m[KCouchDB>.  I will be notified, and then you'll
+[01;31m[K-[m[K86 lib/Data/CouchDB.pm:426 L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Data[01;31m[K-[m[KCouchDB>
+[01;31m[K-[m[K87 lib/Data/CouchDB.pm:430 L<http://annocpan.org/dist/Data[01;31m[K-[m[KCouchDB>
+[01;31m[K-[m[K88 lib/Data/CouchDB.pm:434 L<http://cpanratings.perl.org/d/Data[01;31m[K-[m[KCouchDB>
+[01;31m[K-[m[K89 lib/Data/CouchDB.pm:438 L<http://search.cpan.org/dist/Data[01;31m[K-[m[KCouchDB/>
+[01;31m[K-[m[K90 lib/Data/CouchDB.pm:468 This license includes the non[01;31m[K-[m[Kexclusive, worldwide, free[01;31m[K-[m[Kof[01;31m[K-[m[Kcharge
+[01;31m[K-[m[K91 lib/Data/CouchDB.pm:472 Package. If you institute patent litigation (including a cross[01;31m[K-[m[Kclaim or
+[01;31m[K-[m[K92 lib/Data/CouchDB.pm:480 PURPOSE, OR NON[01;31m[K-[m[KINFRINGEMENT ARE DISCLAIMED TO THE EXTENT PERMITTED BY
+[01;31m[K-[m[K93 lib/Data/CouchDB/Connection.pm:9 Data::CouchDB [01;31m[K-[m[K CouchDB document management
+[01;31m[K-[m[K94 lib/Data/CouchDB/Connection.pm:25     my $couch_connection = Data::CouchDB::Connection[01;31m[K-[m[K>new(
+[01;31m[K-[m[K95 lib/Data/CouchDB/Connection.pm:171         $couchdb[01;31m[K-[m[K>document($db, $doc_id);
+[01;31m[K-[m[K96 lib/Data/CouchDB/Connection.pm:174         $couchdb[01;31m[K-[m[K>document($db, $doc_id, $data);
+[01;31m[K-[m[K97 lib/Data/CouchDB/Connection.pm:187     my $couch_doc = $self[01;31m[K-[m[K>_doc($doc);
+[01;31m[K-[m[K98 lib/Data/CouchDB/Connection.pm:188     try { $couch_doc[01;31m[K-[m[K>retrieve; }
+[01;31m[K-[m[K99 lib/Data/CouchDB/Connection.pm:190         Data::CouchDB::RetrieveFailed[01;31m[K-[m[K>throw(
+[01;31m[K-[m[K100 lib/Data/CouchDB/Connection.pm:191             db       => $self[01;31m[K-[m[K>db,
+[01;31m[K-[m[K101 lib/Data/CouchDB/Connection.pm:192             uri      => $self[01;31m[K-[m[K>log_uri,
+[01;31m[K-[m[K102 lib/Data/CouchDB/Connection.pm:199         if (exists $data[01;31m[K-[m[K>{_rev}) {
+[01;31m[K-[m[K103 lib/Data/CouchDB/Connection.pm:200             if ($data[01;31m[K-[m[K>{_rev} ne $couch_doc[01;31m[K-[m[K>rev) {
+[01;31m[K-[m[K104 lib/Data/CouchDB/Connection.pm:201                 Data::CouchDB::RevisionNotMatched[01;31m[K-[m[K>throw(
+[01;31m[K-[m[K105 lib/Data/CouchDB/Connection.pm:202                     uri      => $self[01;31m[K-[m[K>log_uri,
+[01;31m[K-[m[K106 lib/Data/CouchDB/Connection.pm:203                     db       => $self[01;31m[K-[m[K>db,
+[01;31m[K-[m[K107 lib/Data/CouchDB/Connection.pm:205                     error    => "CouchDB Revision mismatch " . $data[01;31m[K-[m[K>{_rev} . '!=' . $couch_doc[01;31m[K-[m[K>rev
+[01;31m[K-[m[K108 lib/Data/CouchDB/Connection.pm:208             delete $data[01;31m[K-[m[K>{_rev};
+[01;31m[K-[m[K109 lib/Data/CouchDB/Connection.pm:211         delete $data[01;31m[K-[m[K>{_id} if (exists $data[01;31m[K-[m[K>{_id});
+[01;31m[K-[m[K110 lib/Data/CouchDB/Connection.pm:214             $couch_doc[01;31m[K-[m[K>data($data);
+[01;31m[K-[m[K111 lib/Data/CouchDB/Connection.pm:215             $couch_doc[01;31m[K-[m[K>update;
+[01;31m[K-[m[K112 lib/Data/CouchDB/Connection.pm:218             Data::CouchDB::UpdateFailed[01;31m[K-[m[K>throw(
+[01;31m[K-[m[K113 lib/Data/CouchDB/Connection.pm:219                 uri      => $self[01;31m[K-[m[K>log_uri,
+[01;31m[K-[m[K114 lib/Data/CouchDB/Connection.pm:220                 db       => $self[01;31m[K-[m[K>db,
+[01;31m[K-[m[K115 lib/Data/CouchDB/Connection.pm:228     $data         = $couch_doc[01;31m[K-[m[K>data;
+[01;31m[K-[m[K116 lib/Data/CouchDB/Connection.pm:229     $data[01;31m[K-[m[K>{_rev} = $couch_doc[01;31m[K-[m[K>rev;
+[01;31m[K-[m[K117 lib/Data/CouchDB/Connection.pm:230     $data[01;31m[K-[m[K>{_id}  = $couch_doc[01;31m[K-[m[K>id;
+[01;31m[K-[m[K118 lib/Data/CouchDB/Connection.pm:241         $couchdb[01;31m[K-[m[K>view($db, $viewname);
+[01;31m[K-[m[K119 lib/Data/CouchDB/Connection.pm:244         $couchdb[01;31m[K-[m[K>view($db, $viewname, $parameters);
+[01;31m[K-[m[K120 lib/Data/CouchDB/Connection.pm:257     my $design_doc = $ex_params[01;31m[K-[m[K>{design_doc} || $self[01;31m[K-[m[K>design_doc;
+[01;31m[K-[m[K121 lib/Data/CouchDB/Connection.pm:261     my $couch_design_doc = $self[01;31m[K-[m[K>_retrieved_design_doc;
+[01;31m[K-[m[K122 lib/Data/CouchDB/Connection.pm:263     try { $result = $couch_design_doc[01;31m[K-[m[K>queryView($view, %$params); }
+[01;31m[K-[m[K123 lib/Data/CouchDB/Connection.pm:265         Data::CouchDB::QueryFailed[01;31m[K-[m[K>throw(
+[01;31m[K-[m[K124 lib/Data/CouchDB/Connection.pm:266             db    => $self[01;31m[K-[m[K>db,
+[01;31m[K-[m[K125 lib/Data/CouchDB/Connection.pm:267             uri   => $self[01;31m[K-[m[K>log_uri,
+[01;31m[K-[m[K126 lib/Data/CouchDB/Connection.pm:274     foreach my $row (@{$result[01;31m[K-[m[K>{rows}}) {
+[01;31m[K-[m[K127 lib/Data/CouchDB/Connection.pm:275         if ($row[01;31m[K-[m[K>{id}) {
+[01;31m[K-[m[K128 lib/Data/CouchDB/Connection.pm:276             push @{$documents}, $row[01;31m[K-[m[K>{id};
+[01;31m[K-[m[K129 lib/Data/CouchDB/Connection.pm:290     if($couchdb[01;31m[K-[m[K>can_connect) {
+[01;31m[K-[m[K130 lib/Data/CouchDB/Connection.pm:295     1     [01;31m[K-[m[K can read
+[01;31m[K-[m[K131 lib/Data/CouchDB/Connection.pm:296     undef [01;31m[K-[m[K otherwise
+[01;31m[K-[m[K132 lib/Data/CouchDB/Connection.pm:302     my $client = CouchDB::Client[01;31m[K-[m[K>new(uri => $self[01;31m[K-[m[K>uri);
+[01;31m[K-[m[K133 lib/Data/CouchDB/Connection.pm:303     return $client[01;31m[K-[m[K>testConnection;
+[01;31m[K-[m[K134 lib/Data/CouchDB/Connection.pm:316     my $doc = $self[01;31m[K-[m[K>_design_doc;
+[01;31m[K-[m[K135 lib/Data/CouchDB/Connection.pm:318     try { $doc[01;31m[K-[m[K>retrieve; $design_doc = $doc[01;31m[K-[m[K>data; };
+[01;31m[K-[m[K136 lib/Data/CouchDB/Connection.pm:322         $doc[01;31m[K-[m[K>create;
+[01;31m[K-[m[K137 lib/Data/CouchDB/Connection.pm:324         $design_doc[01;31m[K-[m[K>{views} = {};
+[01;31m[K-[m[K138 lib/Data/CouchDB/Connection.pm:327     $design_doc[01;31m[K-[m[K>{views} = {%{$design_doc[01;31m[K-[m[K>{views}}, %$new_view};
+[01;31m[K-[m[K139 lib/Data/CouchDB/Connection.pm:329         $doc[01;31m[K-[m[K>data($design_doc);
+[01;31m[K-[m[K140 lib/Data/CouchDB/Connection.pm:330         $doc[01;31m[K-[m[K>update;
+[01;31m[K-[m[K141 lib/Data/CouchDB/Connection.pm:333         Data::CouchDB::UpdateFailed[01;31m[K-[m[K>throw(
+[01;31m[K-[m[K142 lib/Data/CouchDB/Connection.pm:334             uri      => $self[01;31m[K-[m[K>log_uri,
+[01;31m[K-[m[K143 lib/Data/CouchDB/Connection.pm:335             db       => $self[01;31m[K-[m[K>db,
+[01;31m[K-[m[K144 lib/Data/CouchDB/Connection.pm:336             document => $self[01;31m[K-[m[K>design_doc,
+[01;31m[K-[m[K145 lib/Data/CouchDB/Connection.pm:342     $self[01;31m[K-[m[K>_design_doc($self[01;31m[K-[m[K>_build__design_doc);
+[01;31m[K-[m[K146 lib/Data/CouchDB/Connection.pm:343     $self[01;31m[K-[m[K>_retrieved_design_doc($self[01;31m[K-[m[K>_build__retrieved_design_doc);
+[01;31m[K-[m[K147 lib/Data/CouchDB/Connection.pm:354         my $doc_id = $couchdb[01;31m[K-[m[K>create_document($db, $doc_id);
+[01;31m[K-[m[K148 lib/Data/CouchDB/Connection.pm:357         my $doc_id = $couchdb[01;31m[K-[m[K>create_document($db);
+[01;31m[K-[m[K149 lib/Data/CouchDB/Connection.pm:366     my $couch_doc = $self[01;31m[K-[m[K>_doc($doc);
+[01;31m[K-[m[K150 lib/Data/CouchDB/Connection.pm:368     try { $couch_doc[01;31m[K-[m[K>create; }
+[01;31m[K-[m[K151 lib/Data/CouchDB/Connection.pm:370         Data::CouchDB::Exception[01;31m[K-[m[K>throw(
+[01;31m[K-[m[K152 lib/Data/CouchDB/Connection.pm:371             uri     => $self[01;31m[K-[m[K>log_uri,
+[01;31m[K-[m[K153 lib/Data/CouchDB/Connection.pm:373             message => "Creating " . (($doc) ? $doc : "new") . " in " . $self[01;31m[K-[m[K>db . " failed: $_",
+[01;31m[K-[m[K154 lib/Data/CouchDB/Connection.pm:377     return $couch_doc[01;31m[K-[m[K>id;
+[01;31m[K-[m[K155 lib/Data/CouchDB/Connection.pm:385     $couchdb[01;31m[K-[m[K>delete_document($db, $doc_id);
+[01;31m[K-[m[K156 lib/Data/CouchDB/Connection.pm:395     my $couch_doc = $self[01;31m[K-[m[K>_doc($doc);
+[01;31m[K-[m[K157 lib/Data/CouchDB/Connection.pm:398         $couch_doc[01;31m[K-[m[K>retrieve;
+[01;31m[K-[m[K158 lib/Data/CouchDB/Connection.pm:399         $couch_doc[01;31m[K-[m[K>delete;
+[01;31m[K-[m[K159 lib/Data/CouchDB/Connection.pm:402         Data::CouchDB::Exception[01;31m[K-[m[K>throw(
+[01;31m[K-[m[K160 lib/Data/CouchDB/Connection.pm:403             uri     => $self[01;31m[K-[m[K>log_uri,
+[01;31m[K-[m[K161 lib/Data/CouchDB/Connection.pm:405             message => "Deleting $doc from " . $self[01;31m[K-[m[K>db . " failed",
+[01;31m[K-[m[K162 lib/Data/CouchDB/Connection.pm:417     $couchdb[01;31m[K-[m[K>create_database($db);
+[01;31m[K-[m[K163 lib/Data/CouchDB/Connection.pm:424     return $self[01;31m[K-[m[K>_db[01;31m[K-[m[K>create;
+[01;31m[K-[m[K164 lib/Data/CouchDB/Connection.pm:429     return $self[01;31m[K-[m[K>_couchdb_client[01;31m[K-[m[K>dbExists($self[01;31m[K-[m[K>db);
+[01;31m[K-[m[K165 lib/Data/CouchDB/Connection.pm:436     return $self[01;31m[K-[m[K>_db[01;31m[K-[m[K>newDoc($doc);
+[01;31m[K-[m[K166 lib/Data/CouchDB/Connection.pm:465     $params[01;31m[K-[m[K>{uri} = $self[01;31m[K-[m[K>uri;
+[01;31m[K-[m[K167 lib/Data/CouchDB/Connection.pm:466     $params[01;31m[K-[m[K>{ua} = $self[01;31m[K-[m[K>ua if ($self[01;31m[K-[m[K>ua);
+[01;31m[K-[m[K168 lib/Data/CouchDB/Connection.pm:468     my $client = CouchDB::Client[01;31m[K-[m[K>new($params);
+[01;31m[K-[m[K169 lib/Data/CouchDB/Connection.pm:469     unless ($client[01;31m[K-[m[K>testConnection) {
+[01;31m[K-[m[K170 lib/Data/CouchDB/Connection.pm:470         Data::CouchDB::ConnectionFailed[01;31m[K-[m[K>throw(
+[01;31m[K-[m[K171 lib/Data/CouchDB/Connection.pm:471             uri   => $self[01;31m[K-[m[K>log_uri,
+[01;31m[K-[m[K172 lib/Data/CouchDB/Connection.pm:472             error => 'Connection to  ' . $self[01;31m[K-[m[K>log_uri . ' failed',
+[01;31m[K-[m[K173 lib/Data/CouchDB/Connection.pm:481     return $self[01;31m[K-[m[K>_couchdb_client[01;31m[K-[m[K>newDB($self[01;31m[K-[m[K>db);
+[01;31m[K-[m[K174 lib/Data/CouchDB/Connection.pm:487     return $self[01;31m[K-[m[K>_db[01;31m[K-[m[K>newDesignDoc($self[01;31m[K-[m[K>design_doc);
+[01;31m[K-[m[K175 lib/Data/CouchDB/Connection.pm:493     my $design_doc = $self[01;31m[K-[m[K>_design_doc;
+[01;31m[K-[m[K176 lib/Data/CouchDB/Connection.pm:494     try { $design_doc[01;31m[K-[m[K>retrieve; }
+[01;31m[K-[m[K177 lib/Data/CouchDB/Connection.pm:496         Data::CouchDB::RetrieveFailed[01;31m[K-[m[K>throw(
+[01;31m[K-[m[K178 lib/Data/CouchDB/Connection.pm:497             db       => $self[01;31m[K-[m[K>db,
+[01;31m[K-[m[K179 lib/Data/CouchDB/Connection.pm:498             uri      => $self[01;31m[K-[m[K>log_uri,
+[01;31m[K-[m[K180 lib/Data/CouchDB/Connection.pm:499             document => $self[01;31m[K-[m[K>design_doc,
+[01;31m[K-[m[K181 lib/Data/CouchDB/Connection.pm:504     return $self[01;31m[K-[m[K>_design_doc;
+[01;31m[K-[m[K182 lib/Data/CouchDB/Connection.pm:509     my $protocol = $self[01;31m[K-[m[K>protocol;
+[01;31m[K-[m[K183 lib/Data/CouchDB/Connection.pm:513     if ($self[01;31m[K-[m[K>port ne 5984 and $self[01;31m[K-[m[K>couchdb) {
+[01;31m[K-[m[K184 lib/Data/CouchDB/Connection.pm:514         $url .= 'couchdb:' . $self[01;31m[K-[m[K>couchdb . '@';
+[01;31m[K-[m[K185 lib/Data/CouchDB/Connection.pm:517     $url .= $self[01;31m[K-[m[K>host . ':' . $self[01;31m[K-[m[K>port . '/';
+[01;31m[K-[m[K186 lib/Data/CouchDB/Connection.pm:523     my $uri  = $self[01;31m[K-[m[K>protocol;
+[01;31m[K-[m[K187 lib/Data/CouchDB/Connection.pm:525     return $self[01;31m[K-[m[K>protocol . $self[01;31m[K-[m[K>host . ':' . $self[01;31m[K-[m[K>port . '/';
+[01;31m[K-[m[K188 lib/Data/CouchDB/Connection.pm:530     my $port = $self[01;31m[K-[m[K>port;
+[01;31m[K-[m[K189 lib/Data/CouchDB/Connection.pm:545     my $ua = LWP::UserAgent[01;31m[K-[m[K>new();
+[01;31m[K-[m[K190 lib/Data/CouchDB/Connection.pm:546     $ua[01;31m[K-[m[K>ssl_opts(
+[01;31m[K-[m[K191 lib/Data/CouchDB/Connection.pm:554 __PACKAGE__[01;31m[K-[m[K>meta[01;31m[K-[m[K>make_immutable;
+[01;31m[K-[m[K192 lib/Data/CouchDB/Exceptions.pm:9 Data::CouchDB [01;31m[K-[m[K CouchDB document management
+[01;31m[K-[m[K193 lib/Data/CouchDB/Exceptions.pm:62 sub full_message { my $self = shift; return 'Connection to db ' . $self[01;31m[K-[m[K>db . '@' . $self[01;31m[K-[m[K>uri . ' failed with error ' . $self[01;31m[K-[m[K>error; }
+[01;31m[K-[m[K194 t/00[01;31m[K-[m[Kload.t:1 #!perl [01;31m[K-[m[KT
+[01;31m[K-[m[K195 t/01[01;31m[K-[m[Kcouchdb.t:16         my $couch = Data::CouchDB[01;31m[K-[m[K>new(
+[01;31m[K-[m[K196 t/01[01;31m[K-[m[Kcouchdb.t:23         isa_ok $couch[01;31m[K-[m[K>replica, 'Data::CouchDB::Connection';
+[01;31m[K-[m[K197 t/01[01;31m[K-[m[Kcouchdb.t:24         isa_ok $couch[01;31m[K-[m[K>master,  'Data::CouchDB::Connection';
+[01;31m[K-[m[K198 t/01[01;31m[K-[m[Kcouchdb.t:26         is $couch[01;31m[K-[m[K>master[01;31m[K-[m[K>protocol,  'http://';
+[01;31m[K-[m[K199 t/01[01;31m[K-[m[Kcouchdb.t:27         is $couch[01;31m[K-[m[K>replica[01;31m[K-[m[K>protocol, 'http://';
+[01;31m[K-[m[K200 t/01[01;31m[K-[m[Kcouchdb.t:31         my $couch = Data::CouchDB[01;31m[K-[m[K>new(
+[01;31m[K-[m[K201 t/01[01;31m[K-[m[Kcouchdb.t:39         isa_ok $couch[01;31m[K-[m[K>replica, 'Data::CouchDB::Connection';
+[01;31m[K-[m[K202 t/01[01;31m[K-[m[Kcouchdb.t:40         isa_ok $couch[01;31m[K-[m[K>master,  'Data::CouchDB::Connection';
+[01;31m[K-[m[K203 t/01[01;31m[K-[m[Kcouchdb.t:42         is $couch[01;31m[K-[m[K>master[01;31m[K-[m[K>protocol,  'http://';
+[01;31m[K-[m[K204 t/01[01;31m[K-[m[Kcouchdb.t:43         is $couch[01;31m[K-[m[K>replica[01;31m[K-[m[K>protocol, 'http://';
+[01;31m[K-[m[K205 t/01[01;31m[K-[m[Kcouchdb.t:45         is $couch[01;31m[K-[m[K>master[01;31m[K-[m[K>couchdb,  'TESTPASS';
+[01;31m[K-[m[K206 t/01[01;31m[K-[m[Kcouchdb.t:46         is $couch[01;31m[K-[m[K>replica[01;31m[K-[m[K>couchdb, 'TESTPASS';
+[01;31m[K-[m[K207 t/01[01;31m[K-[m[Kcouchdb.t:50         my $couch = Data::CouchDB[01;31m[K-[m[K>new(
+[01;31m[K-[m[K208 t/01[01;31m[K-[m[Kcouchdb.t:59         isa_ok $couch[01;31m[K-[m[K>replica, 'Data::CouchDB::Connection';
+[01;31m[K-[m[K209 t/01[01;31m[K-[m[Kcouchdb.t:60         isa_ok $couch[01;31m[K-[m[K>master,  'Data::CouchDB::Connection';
+[01;31m[K-[m[K210 t/01[01;31m[K-[m[Kcouchdb.t:62         is $couch[01;31m[K-[m[K>master[01;31m[K-[m[K>protocol,  'https://';
+[01;31m[K-[m[K211 t/01[01;31m[K-[m[Kcouchdb.t:63         is $couch[01;31m[K-[m[K>replica[01;31m[K-[m[K>protocol, 'https://';
+[01;31m[K-[m[K212 t/01[01;31m[K-[m[Kcouchdb.t:68     my $couch = Data::CouchDB[01;31m[K-[m[K>new(
+[01;31m[K-[m[K213 t/01[01;31m[K-[m[Kcouchdb.t:76     my $client = CouchDB::Client[01;31m[K-[m[K>new(uri => $couch[01;31m[K-[m[K>master[01;31m[K-[m[K>uri);
+[01;31m[K-[m[K214 t/01[01;31m[K-[m[Kcouchdb.t:77     eval { $client[01;31m[K-[m[K>newDB($test_db)[01;31m[K-[m[K>delete; };
+[01;31m[K-[m[K215 t/01[01;31m[K-[m[Kcouchdb.t:80         isa_ok $couch[01;31m[K-[m[K>replica, 'Data::CouchDB::Connection';
+[01;31m[K-[m[K216 t/01[01;31m[K-[m[Kcouchdb.t:81         isa_ok $couch[01;31m[K-[m[K>master,  'Data::CouchDB::Connection';
+[01;31m[K-[m[K217 t/01[01;31m[K-[m[Kcouchdb.t:83         is $couch[01;31m[K-[m[K>master[01;31m[K-[m[K>protocol,  'http://';
+[01;31m[K-[m[K218 t/01[01;31m[K-[m[Kcouchdb.t:84         is $couch[01;31m[K-[m[K>replica[01;31m[K-[m[K>protocol, 'http://';
+[01;31m[K-[m[K219 t/01[01;31m[K-[m[Kcouchdb.t:86         ok $couch[01;31m[K-[m[K>can_read,  'Can Read';
+[01;31m[K-[m[K220 t/01[01;31m[K-[m[Kcouchdb.t:87         ok $couch[01;31m[K-[m[K>can_write, 'Can Write';
+[01;31m[K-[m[K221 t/01[01;31m[K-[m[Kcouchdb.t:91         ok $couch[01;31m[K-[m[K>create_database();
+[01;31m[K-[m[K222 t/01[01;31m[K-[m[Kcouchdb.t:92         ok $couch[01;31m[K-[m[K>create_document('test_doc');
+[01;31m[K-[m[K223 t/01[01;31m[K-[m[Kcouchdb.t:94         ok $couch[01;31m[K-[m[K>document('test_doc', $contents);
+[01;31m[K-[m[K224 t/01[01;31m[K-[m[Kcouchdb.t:95         my $retrieved = $couch[01;31m[K-[m[K>document('test_doc');
+[01;31m[K-[m[K225 t/01[01;31m[K-[m[Kcouchdb.t:96         ok $couch[01;31m[K-[m[K>document_present('test_doc');
+[01;31m[K-[m[K226 t/01[01;31m[K-[m[Kcouchdb.t:99         ok $couch[01;31m[K-[m[K>master[01;31m[K-[m[K>create_or_update_view($view);
+[01;31m[K-[m[K227 t/01[01;31m[K-[m[Kcouchdb.t:100         ok $couch[01;31m[K-[m[K>view('all');
+[01;31m[K-[m[K228 t/01[01;31m[K-[m[Kcouchdb.t:101         ok $couch[01;31m[K-[m[K>delete_document('test_doc');
+[01;31m[K-[m[K229 t/01[01;31m[K-[m[Kcouchdb.t:102         ok !$couch[01;31m[K-[m[K>document_present('test_doc');
+[01;31m[K-[m[K230 t/01[01;31m[K-[m[Kcouchdb.t:106         my $doc_name = $couch[01;31m[K-[m[K>create_document();
+[01;31m[K-[m[K231 t/01[01;31m[K-[m[Kcouchdb.t:108         ok $couch[01;31m[K-[m[K>document($doc_name, {reached => 1});
+[01;31m[K-[m[K232 t/01[01;31m[K-[m[Kcouchdb.t:109         my $new_doc = $couch[01;31m[K-[m[K>document($doc_name);
+[01;31m[K-[m[K233 t/01[01;31m[K-[m[Kcouchdb.t:110         is $new_doc[01;31m[K-[m[K>{reached}, 1, 'Correct content';
+[01;31m[K-[m[K234 t/01[01;31m[K-[m[Kcouchdb.t:116     my $couch = Data::CouchDB[01;31m[K-[m[K>new(
+[01;31m[K-[m[K235 t/01[01;31m[K-[m[Kcouchdb.t:124     ok !$couch[01;31m[K-[m[K>can_read, 'Cannot Read';
+[01;31m[K-[m[K236 t/01[01;31m[K-[m[Kcouchdb.t:125     ok $couch[01;31m[K-[m[K>can_write, 'Can Write';
+[01;31m[K-[m[K237 t/01[01;31m[K-[m[Kcouchdb.t:128         $couch[01;31m[K-[m[K>document('test');
+[01;31m[K-[m[K238 t/01[01;31m[K-[m[Kcouchdb.t:133         $couch[01;31m[K-[m[K>view('test');
+[01;31m[K-[m[K239 t/01[01;31m[K-[m[Kcouchdb.t:137     ok !$couch[01;31m[K-[m[K>document_present('test');
+[01;31m[K-[m[K240 t/01[01;31m[K-[m[Kcouchdb.t:141     my $couch = Data::CouchDB[01;31m[K-[m[K>new(
+[01;31m[K-[m[K241 t/01[01;31m[K-[m[Kcouchdb.t:149     ok $couch[01;31m[K-[m[K>can_read, 'Cannot Read';
+[01;31m[K-[m[K242 t/01[01;31m[K-[m[Kcouchdb.t:150     ok !$couch[01;31m[K-[m[K>can_write, 'Can Write';
+[01;31m[K-[m[K243 t/01[01;31m[K-[m[Kcouchdb.t:153         $couch[01;31m[K-[m[K>create_database();
+[01;31m[K-[m[K244 t/01[01;31m[K-[m[Kcouchdb.t:158         $couch[01;31m[K-[m[K>create_document('test');
+[01;31m[K-[m[K245 t/01[01;31m[K-[m[Kcouchdb.t:163         $couch[01;31m[K-[m[K>document('test', {galaxy => ['planets', 'stars', 'debris']});
+[01;31m[K-[m[K246 t/01[01;31m[K-[m[Kcouchdb.t:168         $couch[01;31m[K-[m[K>delete_document('test');
+[01;31m[K-[m[K247 t/01[01;31m[K-[m[Kcouchdb.t:174     my $couch = Data::CouchDB[01;31m[K-[m[K>new(
+[01;31m[K-[m[K248 t/01[01;31m[K-[m[Kcouchdb.t:180     my $client = CouchDB::Client[01;31m[K-[m[K>new(uri => $couch[01;31m[K-[m[K>master[01;31m[K-[m[K>uri);
+[01;31m[K-[m[K249 t/01[01;31m[K-[m[Kcouchdb.t:181     ok $client[01;31m[K-[m[K>newDB($test_db)[01;31m[K-[m[K>delete, 'Test DB deleted';
+[01;31m[K-[m[K250 t/03[01;31m[K-[m[Kconnection_builds.t:11     my $couch = Data::CouchDB::Connection[01;31m[K-[m[K>new(
+[01;31m[K-[m[K251 t/03[01;31m[K-[m[Kconnection_builds.t:17     is $couch[01;31m[K-[m[K>uri,     'https://couchdb:TESTPASS@localhost:6984/';
+[01;31m[K-[m[K252 t/03[01;31m[K-[m[Kconnection_builds.t:18     is $couch[01;31m[K-[m[K>log_uri, 'https://localhost:6984/';
+[01;31m[K-[m[K253 t/03[01;31m[K-[m[Kconnection_builds.t:22     my $couch = Data::CouchDB::Connection[01;31m[K-[m[K>new(
+[01;31m[K-[m[K254 t/03[01;31m[K-[m[Kconnection_builds.t:29     is $couch[01;31m[K-[m[K>uri,     'https://couchdb:TESTPASS@localhost:6984/';
+[01;31m[K-[m[K255 t/03[01;31m[K-[m[Kconnection_builds.t:30     is $couch[01;31m[K-[m[K>log_uri, 'https://localhost:6984/';
+[01;31m[K-[m[K256 t/03[01;31m[K-[m[Kconnection_builds.t:35         my $couch = Data::CouchDB::Connection[01;31m[K-[m[K>new(
+[01;31m[K-[m[K257 t/03[01;31m[K-[m[Kconnection_builds.t:40         is $couch[01;31m[K-[m[K>uri,     'http://localhost:5984/';
+[01;31m[K-[m[K258 t/03[01;31m[K-[m[Kconnection_builds.t:41         is $couch[01;31m[K-[m[K>log_uri, 'http://localhost:5984/';
+[01;31m[K-[m[K259 t/03[01;31m[K-[m[Kconnection_builds.t:46     my $couch = Data::CouchDB::Connection[01;31m[K-[m[K>new(
+[01;31m[K-[m[K260 t/03[01;31m[K-[m[Kconnection_builds.t:52     is $couch[01;31m[K-[m[K>uri,     'http://localhost:5984/';
+[01;31m[K-[m[K261 t/03[01;31m[K-[m[Kconnection_builds.t:53     is $couch[01;31m[K-[m[K>log_uri, 'http://localhost:5984/';
+[01;31m[K-[m[K262 t/03[01;31m[K-[m[Kconnection_builds.t:58         my $couch = Data::CouchDB::Connection[01;31m[K-[m[K>new(
+[01;31m[K-[m[K263 t/03[01;31m[K-[m[Kconnection_builds.t:63         is $couch[01;31m[K-[m[K>design_doc, '_design/docs', 'Correct Design doc';
+[01;31m[K-[m[K264 t/03[01;31m[K-[m[Kconnection_builds.t:67         my $couch = Data::CouchDB::Connection[01;31m[K-[m[K>new(
+[01;31m[K-[m[K265 t/03[01;31m[K-[m[Kconnection_builds.t:73         is $couch[01;31m[K-[m[K>design_doc, 'ikeepthemhere', 'Correct Design doc';
+[01;31m[K-[m[K266 t/04[01;31m[K-[m[Kconnection.t:13         my $couch = Data::CouchDB::Connection[01;31m[K-[m[K>new(
+[01;31m[K-[m[K267 t/04[01;31m[K-[m[Kconnection.t:18         ok $couch[01;31m[K-[m[K>can_connect, 'Can connect';
+[01;31m[K-[m[K268 t/04[01;31m[K-[m[Kconnection.t:21         my $fake_couch = Data::CouchDB::Connection[01;31m[K-[m[K>new(
+[01;31m[K-[m[K269 t/04[01;31m[K-[m[Kconnection.t:26         ok !$fake_couch[01;31m[K-[m[K>can_connect, 'Cannot connect';
+[01;31m[K-[m[K270 t/04[01;31m[K-[m[Kconnection.t:30 my $couch = Data::CouchDB::Connection[01;31m[K-[m[K>new(
+[01;31m[K-[m[K271 t/04[01;31m[K-[m[Kconnection.t:36 $couch[01;31m[K-[m[K>can_connect or BAIL_OUT('Unable to connect to couch');
+[01;31m[K-[m[K272 t/04[01;31m[K-[m[Kconnection.t:38 my $client = CouchDB::Client[01;31m[K-[m[K>new(uri => $couch[01;31m[K-[m[K>uri);
+[01;31m[K-[m[K273 t/04[01;31m[K-[m[Kconnection.t:39 eval { $client[01;31m[K-[m[K>newDB('couch_ds_test')[01;31m[K-[m[K>delete; };
+[01;31m[K-[m[K274 t/04[01;31m[K-[m[Kconnection.t:42     ok $couch[01;31m[K-[m[K>create_database(), 'Created Couch Test Db';
+[01;31m[K-[m[K275 t/04[01;31m[K-[m[Kconnection.t:44         ok $couch[01;31m[K-[m[K>create_document('test_doc'), 'Creates named doc';
+[01;31m[K-[m[K276 t/04[01;31m[K-[m[Kconnection.t:45         ok $couch[01;31m[K-[m[K>delete_document('test_doc'), 'Deletes named doc';
+[01;31m[K-[m[K277 t/04[01;31m[K-[m[Kconnection.t:47         my $rev_id = $couch[01;31m[K-[m[K>create_document();
+[01;31m[K-[m[K278 t/04[01;31m[K-[m[Kconnection.t:49         ok $couch[01;31m[K-[m[K>delete_document($rev_id), 'Deletes named doc';
+[01;31m[K-[m[K279 t/04[01;31m[K-[m[Kconnection.t:53         ok $couch[01;31m[K-[m[K>create_document('test_doc');
+[01;31m[K-[m[K280 t/04[01;31m[K-[m[Kconnection.t:55         ok $couch[01;31m[K-[m[K>document('test_doc', $contents), 'Able to save document';
+[01;31m[K-[m[K281 t/04[01;31m[K-[m[Kconnection.t:56         my $fetched = $couch[01;31m[K-[m[K>document('test_doc');
+[01;31m[K-[m[K282 t/04[01;31m[K-[m[Kconnection.t:57         ok $fetched[01;31m[K-[m[K>{_rev}, 'Revision is populated';
+[01;31m[K-[m[K283 t/04[01;31m[K-[m[Kconnection.t:58         is $fetched[01;31m[K-[m[K>{_id}, 'test_doc', 'Id is populated';
+[01;31m[K-[m[K284 t/04[01;31m[K-[m[Kconnection.t:64         ok $couch[01;31m[K-[m[K>create_or_update_view($function), "View Created";
+[01;31m[K-[m[K285 t/04[01;31m[K-[m[Kconnection.t:66         my $docs = $couch[01;31m[K-[m[K>view("all");
+[01;31m[K-[m[K286 t/04[01;31m[K-[m[Kconnection.t:69         my $contents = $couch[01;31m[K-[m[K>document($docs[01;31m[K-[m[K>[0]);
+[01;31m[K-[m[K287 t/04[01;31m[K-[m[Kconnection.t:70         is $contents[01;31m[K-[m[K>{_id}, 'test_doc', 'Correct document';
+[01;31m[K-[m[K288 t/04[01;31m[K-[m[Kconnection.t:75         ok $couch[01;31m[K-[m[K>create_or_update_view($function), "View Created";
+[01;31m[K-[m[K289 t/04[01;31m[K-[m[Kconnection.t:77         my $docs = $couch[01;31m[K-[m[K>view("all");
+[01;31m[K-[m[K290 t/04[01;31m[K-[m[Kconnection.t:80         my $contents = $couch[01;31m[K-[m[K>document($docs[01;31m[K-[m[K>[0]);
+[01;31m[K-[m[K291 t/04[01;31m[K-[m[Kconnection.t:81         is $contents[01;31m[K-[m[K>{_id}, 'test_doc', 'Correct document';
+[01;31m[K-[m[K292 t/04[01;31m[K-[m[Kconnection.t:90         ok $couch[01;31m[K-[m[K>create_or_update_view($function), "View Created";
+[01;31m[K-[m[K293 t/04[01;31m[K-[m[Kconnection.t:92         ok $couch[01;31m[K-[m[K>create_document('test_doc1');
+[01;31m[K-[m[K294 t/04[01;31m[K-[m[Kconnection.t:94         ok $couch[01;31m[K-[m[K>document('test_doc1', $contents), 'Able to save document';
+[01;31m[K-[m[K295 t/04[01;31m[K-[m[Kconnection.t:96         $contents = $couch[01;31m[K-[m[K>view("append");
+[01;31m[K-[m[K296 t/04[01;31m[K-[m[Kconnection.t:97         is $contents[01;31m[K-[m[K>[0][01;31m[K-[m[K>{value}, '0headcrabsvortigaunts', 'Got Correct content';
+[01;31m[K-[m[K297 t/04[01;31m[K-[m[Kconnection.t:103         my $fake_couch = Data::CouchDB::Connection[01;31m[K-[m[K>new(
+[01;31m[K-[m[K298 t/04[01;31m[K-[m[Kconnection.t:108         ok !$fake_couch[01;31m[K-[m[K>can_connect, 'Cannot connect';
+[01;31m[K-[m[K299 t/04[01;31m[K-[m[Kconnection.t:110             $fake_couch[01;31m[K-[m[K>document('test_doc');
+[01;31m[K-[m[K300 t/04[01;31m[K-[m[Kconnection.t:115             $fake_couch[01;31m[K-[m[K>view('test_doc');
+[01;31m[K-[m[K301 t/04[01;31m[K-[m[Kconnection.t:121         my $couch = Data::CouchDB::Connection[01;31m[K-[m[K>new(
+[01;31m[K-[m[K302 t/04[01;31m[K-[m[Kconnection.t:127         ok $couch[01;31m[K-[m[K>can_connect, 'Connected';
+[01;31m[K-[m[K303 t/04[01;31m[K-[m[Kconnection.t:130             $couch[01;31m[K-[m[K>document('doc');
+[01;31m[K-[m[K304 t/04[01;31m[K-[m[Kconnection.t:135             $couch[01;31m[K-[m[K>view('doc');
+[01;31m[K-[m[K305 t/04[01;31m[K-[m[Kconnection.t:141         my $couch = Data::CouchDB::Connection[01;31m[K-[m[K>new(
+[01;31m[K-[m[K306 t/04[01;31m[K-[m[Kconnection.t:147         ok $couch[01;31m[K-[m[K>can_connect, 'Connected';
+[01;31m[K-[m[K307 t/04[01;31m[K-[m[Kconnection.t:149         ok $couch[01;31m[K-[m[K>create_or_update_view($view);
+[01;31m[K-[m[K308 t/04[01;31m[K-[m[Kconnection.t:151             $couch[01;31m[K-[m[K>view('doc');
+[01;31m[K-[m[K309 t/04[01;31m[K-[m[Kconnection.t:158     $couch[01;31m[K-[m[K>create_database();
+[01;31m[K-[m[K310 t/04[01;31m[K-[m[Kconnection.t:163     my $client = CouchDB::Client[01;31m[K-[m[K>new(uri => $couch[01;31m[K-[m[K>uri);
+[01;31m[K-[m[K311 t/04[01;31m[K-[m[Kconnection.t:164     ok $client[01;31m[K-[m[K>newDB('couch_ds_test')[01;31m[K-[m[K>delete, 'Test DB deleted';
+[01;31m[K-[m[K312 t/manifest.t:1 #!perl [01;31m[K-[m[KT
+[01;31m[K-[m[K313 t/pod[01;31m[K-[m[Kcoverage.t:1 #!perl [01;31m[K-[m[KT
+[01;31m[K-[m[K314 t/pod.t:1 #!perl [01;31m[K-[m[KT
+[01;31m[K-[m[K315 xt/boilerplate.t:1 #!perl [01;31m[K-[m[KT
+[01;31m[K-[m[K316 xt/boilerplate.t:35         'the great new $MODULENAME'   => qr/ [01;31m[K-[m[K The great new /,

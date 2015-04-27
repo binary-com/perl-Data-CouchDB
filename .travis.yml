@@ -1,0 +1,30 @@
+language: perl
+services:
+    - couchdb
+    - redis-server
+perl:
+    - "5.14"
+sudo: false
+before_install:
+    # install prereqs
+    - "cpanm Test::Most"
+    - "cpanm Test::Exception"
+    - "cpanm Test::NoWarnings"
+    - "cpanm Test::MockModule"
+    - "cpanm CouchDB::Client"
+    - "cpanm LWP::UserAgent"
+    - "cpanm Cache::RedisDB"
+    - "cpanm Exception::Class"
+    - "cpanm Moose"
+    - "cpanm MooseX::StrictConstructor"
+    - "cpanm namespace::autoclean"
+    - "cpanm CouchDB::Client"
+    - "cpanm Net::SSL"
+    - "cpanm LWP::UserAgent"
+    - "cpanm HTTP::Request"
+    - "cpanm HTTP::Headers"
+    - "cpanm Try::Tiny"
+    - "cpanm IO::Socket::SSL"
+    - "cpanm Devel::Cover::Report::Coveralls"
+script:
+    perl Makefile.PL && make test && cover -test -report coveralls
