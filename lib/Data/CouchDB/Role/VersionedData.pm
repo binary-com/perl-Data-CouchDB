@@ -1,4 +1,4 @@
-package Data::CouchDB::Role::VersionedSymbolData;
+package Data::CouchDB::Role::VersionedData;
 
 =head1 NAME
 
