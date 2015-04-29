@@ -10,11 +10,11 @@ Data::CouchDB - CouchDB document management
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =cut
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 
 =head1 NAME
@@ -24,11 +24,11 @@ Data::CouchDB
 =head1 SYNOPSYS
 
     my $couchdb = Data::CouchDB->new(
-        replica_host   => 'localhost',
-        replica_port   => 5432,
-        master_host   => 'localhost',
-        master_port   => 5432,
-        couch => 'testdb',
+        replica_host => 'localhost',
+        replica_port => 5432,
+        master_host  => 'localhost',
+        master_port  => 5432,
+        couch        => 'testdb',
     );
 
 =head1 DESCRIPTION

@@ -106,7 +106,15 @@ has _couchdb => (
 
 sub _build__couchdb {
     my $self = shift;
-    return Data::CouchDB::Handler->new()->couchdb($self->_data_location);
+
+    # A hashref of couch databases is required
+    my $couchdb_databases = {
+        $self->_data_location => $self->_data_location,
+    };
+
+    return Data::CouchDB::Handler->new(
+        couchdb_databases => $couchdb_databases,
+    )->couchdb($self->_data_location);
 }
 
 =head2 add_to_history

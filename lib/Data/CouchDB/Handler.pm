@@ -6,10 +6,17 @@ use Data::CouchDB;
 use YAML::XS;
 use feature 'state';
 
+has couchdb_databases => (
+    is         => 'rw',
+    isa        => 'HashRef',
+    required   => 1,
+);
+
 sub couchdb {
     my $self    = shift;
-    my $db_name = shift;
+    my $db      = shift;
     my $ua      = shift;
+    my $db_name = $self->couchdb_databases->{$db} || $db;
 
     if ($ua or not defined $self->_couch_cache->{$db_name}) {
         my $params = $self->_build_couchdb_params($db_name);
