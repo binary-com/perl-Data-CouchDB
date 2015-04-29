@@ -2,6 +2,8 @@ package Data::CouchDB::Handler;
 
 use Moose;
 
+our $VERSION = '0.05';
+
 use Data::CouchDB;
 use YAML::XS;
 use feature 'state';

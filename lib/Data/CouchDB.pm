@@ -16,7 +16,6 @@ Version 0.05
 
 our $VERSION = '0.05';
 
-
 =head1 NAME
 
 Data::CouchDB
