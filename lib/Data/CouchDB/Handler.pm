@@ -11,7 +11,6 @@ use feature 'state';
 has couchdb_databases => (
     is         => 'rw',
     isa        => 'HashRef',
-    required   => 1,
 );
 
 sub couchdb {
@@ -54,6 +53,7 @@ sub _build_couchdb_params {
         $params->{master_protocol} = 'https://';
     }
     $params->{couchdb} = $config->{password};
+
     return $params;
 }
 
@@ -62,6 +62,22 @@ has '_couch_cache' => (
     isa     => 'HashRef',
     default => sub { {}; },
 );
+
+around BUILDARGS => sub {
+    my $orig = shift;
+    my $class = shift;
+
+    # set the databases
+    my $dbs = {};
+
+    my $config = YAML::XS::LoadFile('/etc/couchdb.yml');
+
+    if (exists $config->{couchdb_databases}) {
+        $dbs = $config->{couchdb_databases};
+    }
+
+    return $class->$orig(couchdb_databases => $dbs);
+};
 
 __PACKAGE__->meta->make_immutable;
 

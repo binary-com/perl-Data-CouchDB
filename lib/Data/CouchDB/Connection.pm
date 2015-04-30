@@ -44,7 +44,6 @@ use HTTP::Request;
 use HTTP::Headers;
 use Try::Tiny;
 use IO::Socket::SSL qw( SSL_VERIFY_NONE );
-
 use Data::CouchDB::Exceptions;
 
 =head2 host
@@ -80,7 +79,7 @@ db with which to operate.
 has db => (
     is      => 'ro',
     isa     => 'Str',
-    default => 'bom',
+    default => 'db',
 );
 
 =head2 protocol
@@ -313,7 +312,7 @@ sub create_or_update_view {
     my $design_doc;
     try { $doc->retrieve; $design_doc = $doc->data; };
 
-    #possibly new view
+    # possibly new view
     unless ($design_doc) {
         $doc->create;
         $design_doc = {};
@@ -334,7 +333,7 @@ sub create_or_update_view {
         );
     };
 
-    #Recreate design doc since we updated it.
+    # Recreate design doc since we updated it.
     $self->_design_doc($self->_build__design_doc);
     $self->_retrieved_design_doc($self->_build__retrieved_design_doc);
 
@@ -505,7 +504,7 @@ sub _build_uri {
     my $protocol = $self->protocol;
     my $url      = $protocol;
 
-    #If couchdb is not set then it has no password
+    # If couchdb is not set then it has no password
     if ($self->port ne 5984 and $self->couchdb) {
         $url .= 'couchdb:' . $self->couchdb . '@';
     }

@@ -10,11 +10,11 @@ Data::CouchDB - CouchDB document management
 
 =head1 VERSION
 
-Version 0.06
+Version 0.09
 
 =cut
 
-our $VERSION = '0.06';
+our $VERSION = '0.09';
 
 =head1 NAME
 
@@ -61,7 +61,7 @@ db with which to operate.
 has db => (
     is      => 'ro',
     isa     => 'Str',
-    default => 'default',
+    default => 'db',
 );
 
 =head2 couchdb
@@ -306,14 +306,12 @@ sub delete_document {
 Creates a CouchDB Database.
 
 Usage,
-    $couchdb->create_database($db);
-
+    $couchdb->create_database();
 
 =cut
 
 sub create_database {
     my $self = shift;
-
     return $self->master->create_database();
 }
 

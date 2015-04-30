@@ -110,14 +110,12 @@ has _couchdb => (
 sub _build__couchdb {
     my $self = shift;
 
-    # A hashref of couch databases is required
-    my $couchdb_databases = {
-        $self->_data_location => $self->_data_location,
-    };
+    my $handler = Data::CouchDB::Handler->new();
+    if (exists $ENV{COUCHDB_DATABASES}) {
+        $handler->couchdb_databases($ENV{COUCHDB_DATABASES});
+    }
 
-    return Data::CouchDB::Handler->new(
-        couchdb_databases => $couchdb_databases,
-    )->couchdb($self->_data_location);
+    return $handler->couchdb($self->_data_location);
 }
 
 =head2 add_to_history
@@ -129,7 +127,7 @@ Add the current live document to the searchable history
 sub add_to_history {
     my ($self) = @_;
 
-    #If its already a historical document hopefully its id will look like a uuid.
+    # If its already a historical document hopefully its id will look like a uuid.
     if ($self->_looks_like_uuid($self->document->{_id})) {
         croak 'Saving historical document not permitted.';
     }
