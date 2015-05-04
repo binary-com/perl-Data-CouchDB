@@ -113,12 +113,11 @@ sub _build__couchdb {
     my $handler = Data::CouchDB::Handler->new();
     if (exists $ENV{COUCHDB_DATABASES}) {
         $handler->couchdb_databases($ENV{COUCHDB_DATABASES});
-    } 
-    #else {
-        #$handler->couchdb_databases({
-                #$self->_data_location => $self->_data_location,
-                #});
-        #}
+    } else {
+        $handler->couchdb_databases({
+            $self->_data_location => $self->_data_location,
+        });
+    }
 
     return $handler->couchdb($self->_data_location);
 }
