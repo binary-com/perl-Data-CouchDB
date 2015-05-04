@@ -11,7 +11,7 @@ use feature 'state';
 has couchdb_databases => (
     is         => 'rw',
     isa        => 'HashRef',
-    default    => sub { {} },
+    #default    => sub { {} },
 );
 
 sub couchdb {
@@ -64,7 +64,6 @@ has '_couch_cache' => (
     default => sub { {}; },
 );
 
-=pod
 around BUILDARGS => sub {
     my $orig = shift;
     my $class = shift;
@@ -80,7 +79,6 @@ around BUILDARGS => sub {
 
     return $class->$orig(couchdb_databases => $dbs);
 };
-=cut
 
 __PACKAGE__->meta->make_immutable;
 
