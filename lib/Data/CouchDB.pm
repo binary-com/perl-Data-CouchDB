@@ -10,11 +10,11 @@ Data::CouchDB - CouchDB document management
 
 =head1 VERSION
 
-Version 0.10
+Version 0.11
 
 =cut
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 =head1 NAME
 

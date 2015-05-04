@@ -11,6 +11,7 @@ use feature 'state';
 has couchdb_databases => (
     is         => 'rw',
     isa        => 'HashRef',
+    default    => sub { {} },
 );
 
 sub couchdb {
