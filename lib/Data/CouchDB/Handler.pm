@@ -63,6 +63,7 @@ has '_couch_cache' => (
     default => sub { {}; },
 );
 
+=pod
 around BUILDARGS => sub {
     my $orig = shift;
     my $class = shift;
@@ -78,6 +79,7 @@ around BUILDARGS => sub {
 
     return $class->$orig(couchdb_databases => $dbs);
 };
+=cut
 
 __PACKAGE__->meta->make_immutable;
 
