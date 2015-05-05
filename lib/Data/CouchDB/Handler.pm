@@ -64,24 +64,6 @@ has '_couch_cache' => (
     default => sub { {}; },
 );
 
-=pod
-around BUILDARGS => sub {
-    my $orig = shift;
-    my $class = shift;
-
-    # set the databases
-    my $dbs = {};
-
-    my $config = YAML::XS::LoadFile('/etc/couchdb.yml');
-
-    if (exists $config->{couchdb_databases}) {
-        $dbs = $config->{couchdb_databases};
-    }
-
-    return $class->$orig(couchdb_databases => $dbs);
-};
-=cut
-
 __PACKAGE__->meta->make_immutable;
 
 1;
