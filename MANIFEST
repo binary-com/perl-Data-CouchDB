@@ -1,8 +1,4 @@
-.travis.yml
-Changes
-db
 etc/couchdb.yml
-ignore.txt
 lib/Data/CouchDB.pm
 lib/Data/CouchDB/Connection.pm
 lib/Data/CouchDB/Exceptions.pm
