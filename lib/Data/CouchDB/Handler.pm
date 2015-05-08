@@ -2,7 +2,7 @@ package Data::CouchDB::Handler;
 
 use Moose;
 
-our $VERSION = '0.05';
+our $VERSION = '0.13';
 
 use Data::CouchDB;
 use YAML::XS;
