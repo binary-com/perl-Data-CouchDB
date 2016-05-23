@@ -3,6 +3,7 @@ services:
     - couchdb
     - redis-server
 perl:
+    - "5.24"
     - "5.22"
     - "5.20"
     - "5.18"
@@ -10,6 +11,10 @@ perl:
     - "5.14"
 sudo: false
 before_install:
+    - git clone git://github.com/travis-perl/helpers ~/travis-perl-helpers
+    - source ~/travis-perl-helpers/init
+    - build-perl
+    - perl -V
     # install prereqs
     - "cpanm Test::Most"
     - "cpanm Test::Exception"
