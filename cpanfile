@@ -25,4 +25,5 @@ on configure => sub {
 on build => sub {
     requires 'Test::More';
     requires 'Test::MockModule';
+    requires 'Test::Pod::Coverage', '1.10';
 };
