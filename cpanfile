@@ -1,7 +1,7 @@
 requires 'Moose';
 requires 'namespace::autoclean';
 requires 'MooseX::StrictConstructor';
-requries 'Try::Tiny';
+requires 'Try::Tiny';
 requires  'LWP::UserAgent';
 requires 'CouchDB::Client';
 requires 'Net::SSL';
