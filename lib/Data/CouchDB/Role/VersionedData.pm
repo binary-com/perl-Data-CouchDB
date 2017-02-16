@@ -1,7 +1,7 @@
 package Data::CouchDB::Role::VersionedData;
 use strict; use warnings;
 
-our $VERSION = '0.14';
+## VERSION
 
 =head1 NAME
 

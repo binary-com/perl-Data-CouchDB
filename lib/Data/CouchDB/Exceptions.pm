@@ -4,7 +4,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.14';
+## VERSION
 
 =head1 NAME
 
@@ -54,6 +54,12 @@ use Exception::Class (
         fields      => ['db', 'uri', 'error', 'view'],
     },
 );
+
+=head1 METHODS
+
+=head2 full_message
+
+=cut
 
 sub full_message { my $self = shift; return 'Connection to db ' . $self->db . '@' . $self->uri . ' failed with error ' . $self->error; }
 
