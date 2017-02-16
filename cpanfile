@@ -22,7 +22,7 @@ on configure => sub {
     requires 'ExtUtils::MakeMaker';
 };
 
-on test => sub {
+on build => sub {
     requires 'Test::More';
     requires 'Test::MockModule';
 };
