@@ -40,6 +40,12 @@ use Try::Tiny;
 use IO::Socket::SSL qw( SSL_VERIFY_NONE );
 use Data::CouchDB::Exceptions;
 
+=begin Pod::Coverage
+
+    SSL_VERIFY_NONE
+
+=end Pod::Coverage
+
 =head2 host
 
 name of the host to connect to.
