@@ -15,6 +15,7 @@ requires 'JSON';
 requires 'List::Util';
 requires 'Carp';
 requires 'Date::Utility';
+requires 'URL::Encode';
 requires 'perl', '5.006';
 
 on configure => sub {
