@@ -22,8 +22,7 @@ on configure => sub {
     requires 'ExtUtils::MakeMaker';
 };
 
-on build => sub {
+on test => sub {
     requires 'Test::More';
     requires 'Test::MockModule';
-    requires 'Test::Pod::Coverage', '1.10';
 };
