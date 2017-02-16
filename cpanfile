@@ -1,3 +1,4 @@
+requires 'MooseX::StrictConstructor';
 requires 'perl', '5.006';
 
 on configure => sub {
