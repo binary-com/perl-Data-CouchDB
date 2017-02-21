@@ -4,13 +4,7 @@ use 5.006;
 use strict;
 use warnings;
 
-our $VERSION = '0.14';
-
-=head1 NAME
-
-Data::CouchDB - CouchDB document management
-
-=cut
+## VERSION
 
 =head1 NAME
 
@@ -45,6 +39,8 @@ use HTTP::Headers;
 use Try::Tiny;
 use IO::Socket::SSL qw( SSL_VERIFY_NONE );
 use Data::CouchDB::Exceptions;
+
+=for Pod::Coverage SSL_VERIFY_NONE
 
 =head2 host
 
@@ -84,7 +80,7 @@ has db => (
 
 =head2 protocol
 
-protcol with which to connect.
+protocol with which to connect.
 
 Can be,
     'http://' or 'https://'
@@ -176,7 +172,6 @@ sub document {
     my $self      = shift;
     my $doc       = shift;
     my $data      = shift;
-    my $ex_params = shift || {};
 
     return unless ($doc);
     my $couch_doc = $self->_doc($doc);
@@ -247,9 +242,6 @@ sub view {
     my $self      = shift;
     my $view      = shift;
     my $params    = shift;
-    my $ex_params = shift || {};
-
-    my $design_doc = $ex_params->{design_doc} || $self->design_doc;
 
     return unless ($view);
 
@@ -356,7 +348,6 @@ Usage,
 sub create_document {
     my $self      = shift;
     my $doc       = shift;
-    my $ex_params = shift || {};
 
     my $couch_doc = $self->_doc($doc);
 
@@ -385,8 +376,6 @@ Usage,
 sub delete_document {
     my $self      = shift;
     my $doc       = shift;
-    my $ex_params = shift || {};
-
     my $couch_doc = $self->_doc($doc);
 
     try {
@@ -418,6 +407,10 @@ sub create_database {
     my $self = shift;
     return $self->_db->create;
 }
+
+=head2 database_exists
+
+=cut
 
 sub database_exists {
     my $self = shift;
@@ -515,7 +508,6 @@ sub _build_uri {
 
 sub _build_log_uri {
     my $self = shift;
-    my $uri  = $self->protocol;
 
     return $self->protocol . $self->host . ':' . $self->port . '/';
 }

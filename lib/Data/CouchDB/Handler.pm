@@ -2,7 +2,15 @@ package Data::CouchDB::Handler;
 
 use Moose;
 
-our $VERSION = '0.14';
+## VERSION
+
+=head1 NAME
+
+Data::CouchDB::Connection
+
+=head1 METHODS
+
+=cut
 
 use Data::CouchDB;
 use YAML::XS;
@@ -13,6 +21,10 @@ has couchdb_databases => (
     isa        => 'HashRef',
     #default    => sub { {} },
 );
+
+=head2 couchdb
+
+=cut
 
 sub couchdb {
     my $self    = shift;
