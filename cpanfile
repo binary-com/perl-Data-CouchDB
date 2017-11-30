@@ -11,7 +11,6 @@ requires 'IO::Socket::SSL';
 requires 'Cache::RedisDB';
 requires 'Exception::Class';
 requires 'YAML::XS';
-requires 'JSON';
 requires 'List::Util';
 requires 'Carp';
 requires 'Date::Utility';

@@ -14,7 +14,6 @@ Handles pulling in symbol-related data versioned by date.
 =cut
 
 use Net::SSL;
-use JSON qw(to_json from_json);
 use List::Util qw(min max);
 use Moose::Role;
 use Carp;
