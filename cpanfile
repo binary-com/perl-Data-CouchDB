@@ -24,4 +24,5 @@ on configure => sub {
 on test => sub {
     requires 'Test::More';
     requires 'Test::MockModule';
+    requires 'Test::NoWarnings';
 };
