@@ -11,7 +11,6 @@ requires 'IO::Socket::SSL';
 requires 'Cache::RedisDB';
 requires 'Exception::Class';
 requires 'YAML::XS';
-requires 'JSON';
 requires 'List::Util';
 requires 'Carp';
 requires 'Date::Utility';
@@ -25,4 +24,5 @@ on configure => sub {
 on test => sub {
     requires 'Test::More';
     requires 'Test::MockModule';
+    requires 'Test::NoWarnings';
 };
